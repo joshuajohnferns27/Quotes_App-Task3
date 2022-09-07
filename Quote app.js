@@ -1,4 +1,7 @@
+var author = "";
+
 function btnfunction() {
+  document.getElementById("input").value = "";
   fetch("https://quote-api-app.herokuapp.com/quote")
     .then((data) => {
       //console.log(data);
@@ -34,13 +37,31 @@ function forauthor() {
          `;
       });
       document.getElementById("name").innerHTML = lis;
+      addLisHandlers();
     });
+}
+
+function addLisHandlers() {
+  var lis = document.getElementById("name");
+  var rows = lis.getElementsByTagName("li");
+  console.log(rows);
+  for (i = 0; i < rows.length; i++) {
+    var currentRow = rows[i];
+    var createClickHandler = function (row) {
+      return function () {
+        author = row.innerHTML;
+        document.getElementById("input").value = author;
+        return search_button();
+      };
+    };
+    currentRow.onclick = createClickHandler(currentRow);
+  }
 }
 
 function search_button() {
   let users = [];
   const url = "https://quote-api-app.herokuapp.com/quote/search?author=";
-  const value = document.getElementById("input").value;
+  value = document.getElementById("input").value;
   const api = url + value;
   fetch(api)
     .then((data3) => {
