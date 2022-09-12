@@ -1,0 +1,87 @@
+body {
+  background-color: #eee8aadb;
+  font-family: "Sofia", sans-serif;
+}
+.main h1 {
+  padding-top: 60px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+@keyframes anime {
+  0% {
+    background-color: #9afeff;
+  }
+  20% {
+    background-color: #cb6d51;
+  }
+  50% {
+    background-color: #98afc7;
+  }
+  50% {
+    background-color: #00fa9a;
+  }
+  100% {
+    background-color: #e0ffff;
+  }
+}
+
+.main {
+  padding: 0%;
+  animation: anime 30s infinite;
+}
+
+.maincol {
+  padding: 80px;
+  background-color: #fed8b1;
+  box-sizing: border-box;
+  display: inline;
+  font-size: 16px;
+  text-align: center;
+}
+
+.maincol2 {
+  display: inline;
+  padding: 30px;
+  max-height: max-content;
+  line-height: 40px;
+  background-color: coral;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+}
+
+.tabs {
+  padding-top: 10px;
+}
+
+.forbtn {
+  text-align: center;
+}
+
+#bb {
+  padding-left: 20px;
+}
+
+.tabs button {
+  border: none;
+  outline: none;
+  background-color: pink;
+  padding: 14px 16px;
+  font-size: 20px;
+}
+.tabs button:hover {
+  background-color: magenta;
+}
+.tabs button:focus {
+  background-color: #bcc6cc;
+}
+#search {
+  padding: 3px;
+}
+
+.search-bar {
+  padding-left: 50px;
+}
